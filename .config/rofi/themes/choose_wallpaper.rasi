@@ -1,0 +1,105 @@
+/*****----- Configuration -----*****/
+configuration {
+    show-icons:                 true;
+}
+
+/*****----- Global Properties -----*****/
+* {
+    bg-col:  #1E1E2E;
+    bg-col-light: #1E1E2E;
+    border-col: #1E1E2E;
+    selected-col: #1E1E2E;
+    blue: #89B4FA;
+    fg-col: #CDD6F4;
+    fg-col2: #F38BA8;
+    grey: #6C7086;
+
+    font: "JetBrainsMono Nerd Font 14";
+}
+
+/*
+USE_BUTTONS=YES
+*/
+
+/*****----- Main Window -----*****/
+window {
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       100%;
+    x-offset:                    0px;
+    y-offset:                    0px;
+
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               10px;
+    border-color:                @border-col;
+    cursor:                      "default";
+    background-color:            @bg-col;
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    enabled:                     true;
+    spacing:                     0px;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @border-col;
+    background-color:            @fg-col;
+    children:                    [ "listview" ];
+}
+
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    columns:                     3;
+    lines:                       1;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    
+    spacing:                     15px;
+    margin:                      15px;
+    background-color:            @fg-col;
+    cursor:                      "default";
+}
+
+/*****----- Elements -----*****/
+element {
+    enabled:                     true;
+    padding:                     20px 10px;
+    border-radius:               10px;
+    background-color:            @bg-col;
+    text-color:                  @fg-col;
+    cursor:                      pointer;
+}
+element-text {
+    enabled:                     false;
+    font:                        "JetBrainsMono Nerd Font Mono 45";
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+}
+element-icon {
+    enabled:                     true;
+    border-radius:               0px;
+    cursor:                      inherit;
+    background-color:            transparent;
+    size:                        55ch ;
+    text-color:                  inherit;
+}
+
+element selected.normal {
+    background-color:            @fg-col2;
+}
+
+
